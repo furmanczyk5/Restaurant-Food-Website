@@ -1,0 +1,432 @@
+/* TODO: Find a nice, handwriting-styled font for the nav bar. */
+
+:root{
+    /* Use color variables instead of using actual values in rules. */
+    --content-bg-color: white;
+    --content-fg-color: #9E9E9E;
+    --content-accent-color: black;
+    --content-highlight-color: #A8DC3F;
+    --nav-bg-color: rgba(0, 0, 0, .8);
+    --nav-fg-color: white; /* not actually used */
+    --nav-accent-color: #A8DC3F;
+    --nav-highlight-color: white;
+    --footer-bg-color: #1C1C1C;
+    --footer-fg-color: #9E9E9E;
+    --footer-accent-color: #A8DC3F;
+    --footer-highlight-color: white;
+
+    --recipe-bg-color: #EEE;
+}
+
+
+@font-face {
+    font-family: milkshake;
+    src: url("./style/Milkshake.ttf");
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--content-bg-color);
+    color: var(--content-fg-color);
+    font-family: sans-serif;
+}
+
+h3, h4{
+
+    font-family: milkshake;
+    color: var(--content-accent-color);
+}
+
+p{
+    margin: 1% 0%;
+}
+
+li{
+    margin: 2vh 2vw;
+}
+
+a{
+    text-decoration: none;
+    color: var(--content-highlight-color);
+}
+
+a:hover{
+    color: var(--content-accent-color);
+}
+
+iframe{
+    width: 80vw;
+    height: calc(80vh - 50px);
+}
+
+div#nav-container{
+    background-color: var(--nav-bg-color);
+    color: var(--nav-fg-color);
+}
+
+nav{
+    text-align: right;
+    height: 100%;
+}
+
+nav h3{
+    float:left;
+    display: inline-block;
+    text-align: left;
+    width: 20%;
+    height: 30px;
+    padding: 10px;
+    size: 10px;
+    color: var(--nav-accent-color);
+}
+
+.wide-title{
+    width: 70%;
+}
+
+nav#social-links{
+    height: 20px;
+}
+
+nav#social-links>img{
+    margin: 0px 2px;
+}
+
+/* nav links should take up 30px vertically */
+nav a{
+    font-family: milkshake;
+    color: var(--nav-highlight-color);
+    display: inline-block;
+    border: solid 1px var(--nav-bg-color);
+    border-radius: 10%;
+    margin: 5px 3px;
+    height: 20px;
+    vertical-align: center;
+    padding: 8px;
+}
+
+nav a:hover{
+    color: var(--nav-highlight-color);
+    background-color: var(--nav-accent-color);
+    border-color: var(--nav-accent-color);
+}
+
+img#hamburger-button{
+    display: none;
+    padding: 5px;
+    height: 30px;
+}
+
+.collapsed-nav-links{
+    background-color: var(--nav-bg-color);
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    top: 50px;
+    width: 150px;
+    right: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.collapsed-nav-links>a{
+    width: 120px;
+}
+
+section.recipe-top{
+    width: calc(100% - 4vw);
+    border: 2px solid grey;
+    border-radius: 5px;
+    overflow: auto;
+    background-color: var(--recipe-bg-color);
+    padding: 2vh 2vw;
+}
+
+.clear{
+    clear: both;
+}
+
+section.recipe-top>div{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50vw;
+    height: 50vh;
+    float: right;
+}
+
+section.recipe-top>h3, section.recipe-top>p{
+    width: calc(95% - 50vw);
+    float: left;
+}
+
+#recipe-container{
+    clear: both;
+    width: 98%;
+}
+
+#ingredients{
+    padding: 2vh 2vw;
+    float: left;
+    width: 40%;
+}
+
+#ingredients>ul{
+    list-style: square;
+}
+
+#process{
+    padding: 2vh 2vw;
+    float: right;
+    width: 50%;
+}
+
+input{
+    margin: 1%;
+    padding: 0.5em;
+    border: 1px solid var(--content-accent-color);
+    border-radius: 5px;
+}
+
+textarea{
+    padding: 0.5em;
+    margin: 0% 1%;
+    border: 1px solid var(--content-accent-color);
+    border-radius: 5px;
+}
+
+button{
+    margin: 1%;
+    background-color: var(--content-highlight-color);
+    color: var(--content-bg-color);
+    padding: 0.5em;
+
+    border: 1px solid var(--content-highlight-color);
+    border-radius: 5px;
+}
+
+#recipe-list{
+    padding: 1%;
+}
+
+#recipe-list>ul{
+    list-style: square;
+}
+
+#recipe-list>ul>li{
+    padding: 0.5em;
+}
+
+footer{
+    border-top: solid 1px var(--footer-fg-color);
+    text-align: center;
+    padding: 10px;
+    height: 50px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-fg-color);
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--footer-highlight-color);
+}
+
+footer a:hover{
+    color: var(--footer-accent-color);
+}
+
+
+button#to-top {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  background-color: var(--content-accent-color);
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+button#to-top:hover {
+  background-color: var(--content-highlight-color);
+}
+
+button#to-top>img{
+  width: 30px;
+  height: 30px;
+}
+
+.slick-slide{
+    text-align: center;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.slick-slide>h3{
+    color: var(--nav-accent-color);
+    text-shadow: 1px 1px 1px black;
+}
+
+.slick-slider, .slick-list, .slick-track{
+    height: 100%;
+}
+
+div#slideshow-container{
+    text-align: center;
+    height: 70vh;
+}
+
+div#image-container{
+    display: inline-block;
+    text-align: center;
+    height: 70vh;
+    width: 50vw;
+    border: 2px solid black;
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div.slideshow-button{
+    background-color: var(--nav-bg-color);
+    color: var(--nav-highlight-color);
+    padding-top: 34vh;
+    padding-bottom: 34vh;
+    height: 2vh;
+    width: 3vw;
+}
+
+div.slideshow-button:hover{
+    background-color: var(--nav-accent-color);
+}
+
+.float-left{
+    float: left;
+}
+
+.float-right{
+    float: right;
+}
+
+div#center-container{
+    text-align: center;
+    width: 44vw;
+    margin: 0px 3vw;
+    padding: 1%;
+}
+
+div#center-container>h3{
+    color: var(--nav-accent-color);
+    text-shadow: 1px 1px 1px black;
+}
+
+.clear{
+    clear: both;
+}
+
+section.cooking-basics{
+    padding: 1vh 0vh;
+}
+
+section.cooking-basics>p{
+    width: 60%;
+    float: left;
+}
+
+section.cooking-basics>img{
+    max-width: 35%;
+    float: right;
+}
+
+section#content{
+    padding: 0px 2vh;
+    padding-top: calc(var(--nav-height) + 1vh);
+}
+
+div#home-card{
+    padding-top: calc(var(--nav-height) + 5vh);
+    width: 100%;
+    height: calc(95vh - var(--nav-height));
+    text-align: right;
+    background-color: var(--nav-bg-color);
+}
+
+div#home-card h1{
+    font-size: 4em;
+}
+
+div#home-images{
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+}
+
+div#home-images>div{
+    position: absolute;
+    top: 0;
+    left 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    opacity: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div#home-card>h1{
+    font-size: 4em;
+}
+
+div.store-address{
+    text-align: center;
+    margin: 5vh 20vw;
+}
+
+div.store-address h3{
+    display: inline;
+    float: left;
+    padding-bottom: 2vh;
+}
+
+div.store-address h3:hover{
+    color: var(--content-highlight-color);
+}
+
+div.store-address span.address{
+    float: right;
+}
+
+div.store-address p{
+    clear: both;
+}
+
+iframe#map{
+    margin: 0px 15vh;
+}
+
+.home>h3{
+    text-align: center;
+    margin: 2vh 2vw;
+}
+
+section.about-us{
+    margin: 0vh 30vw;
+}
+
+section.about-us p{
+    margin-bottom: 5vh;
+}

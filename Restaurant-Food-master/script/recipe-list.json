@@ -1,0 +1,21 @@
+[{
+		"filename": "stir-fry.html",
+		"title": "Szechuan Tofu and Green Bean Stir-Fry",
+		"image": "stir-fry.jpg"
+	},
+	{
+		"filename": "chicken-salad.html",
+		"title": "Moroccan Chicken Salad",
+		"image": "chicken-salad.jpg"
+	},
+	{
+		"filename": "fettucine.html",
+		"title": "Fettucine with Shiitake Mushrooms and Basil",
+		"image": "fettucine.jpg"
+	},
+	{
+		"filename": "panini.html",
+		"title": "Southwestern Cheese Panini",
+		"image": "panini.jpg"
+	}
+]

@@ -1,0 +1,36 @@
+/* containers.css defines the container layout and sizing */
+
+:root{
+    --nav-height: 70px;
+    --footer-height: 50px;
+    --content-height: calc(100vh - var(--footer-height));
+}
+
+html, body{
+    min-height: 100%;
+}
+
+div#nav-container{
+    height: var(--nav-height);
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+div#not-nav-container{
+    width: 100%;
+    min-height: 100vh;
+}
+
+div#content-container{
+    min-height: var(--content-height);
+}
+
+section#content{
+    min-height: var(--content-height);;
+}
+
+div#footer-container{
+    height: var(--footer-height);
+    clear: both;
+}
